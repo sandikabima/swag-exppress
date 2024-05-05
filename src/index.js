@@ -37,7 +37,7 @@ const options = {
 };
 
 const CSS_URL =
-  "https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/4.1.0/swagger-ui.min.css";
+  "https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/5.17.3/swagger-ui.min.css";
 
 const swaggerDoc = swaggerJSDoc(options);
 app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDoc, {customCssUrl : CSS_URL}));
