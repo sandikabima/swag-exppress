@@ -1,5 +1,4 @@
 {
-    "version": 2,
     "builds": [
       {
         "src": "src/index.js",
@@ -8,12 +7,16 @@
     ],
     "routes": [
       {
-        "src": "/api-docs/(.*)", 
-        "dest": "public/api-docs/$1"
-      },
-      {
         "src": "/(.*)",
         "dest": "src/index.js"
+      },
+      {
+        "src": "/api-docs/(.*)",
+        "status": 200,
+        "headers": {
+          "Content-Type": "text/html; charset=UTF-8"
+        },
+        "continue": true
       }
     ]
   }
